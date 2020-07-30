@@ -1,0 +1,64 @@
+# || Administrador de arquivos ||
+print("\n|| Administrador de arquivos ||\n")
+
+print("Vamos dar início ao último tópico da linguaguem Python 3, um tema bastante relevante e complexo, que aborda a administração de arquivos entre usúario e sistema operacional utilizando programação.\n")
+
+print("Na administração de arquivos temos algumas linhas de comando que são:\n\n'r' Read - ele faz a leitura do arquivo.\n'a' Append - é um comando de anexador e acrescenta conteúdo no final do arquivo. Ele pode criar o arquivo, caso ainda não exista.\n'w' Write - ele abre o comando para escrita do documento ou cria ele caso ainda não exista.\n'x' Create - é um comando específico para criação do arquivo.\n't' Text - define o padrão para arquivos de texto.\n'b' Binary - classifica o arquivo como binário, utilizado para imagens.")
+
+print("\nPra começar, vamos criar um aquivo chamado 'projeto_python3' e trabalhar com ele para edição de texto, como segue no exemplo:\n")
+
+print("arquivo = open('projeto_python3', 'x')\n")
+
+arquivo = open('projeto_python3.txt', "x")
+
+print("Com essa linha de comando, acabamos de criar um arquivo ainda vazio e arquivada dentro no sistema operacional. Sendo está uma das formas de se criar um arquivo, outra possibilidade é dando o caminho dentro do sistema operacional.\n")
+
+print("arquivo2 = open(C:\\Users\Public\Pasta_teste\projeto_teste.txt', 'x')\n")
+
+print("Dessa forma, podemos indicar um local pra salvar o arquivo. A seguir, vamos escrever um conteúdo nesse novo arquivo via Python:\n")
+
+print("arquivo.write('Olá, sejam bem-vindos ao projeto python 3!')\narquivo.close()\narquivo = open('projeto_python3.txt', 'r')\nprint(arquivo.read())\n")
+
+print("A mensagem desse código vai ser:\n")
+
+arquivo.write("Olá, sejam bem-vindos ao arquivo projeto python 3!")
+arquivo.close()
+
+arquivo = open("projeto_python3.txt", "r")
+
+print(arquivo.read())
+
+print("\nDessa forma, utilizando '.write()', '.close()', '.read()' é possível administrar tanto o conteúdo em si, quanto dar o comando de parar edição e por último fazer a leitura do conteúdo editado. No próximo passo, vamos criar um 'append' ou anexo ao conteúdo do arquivo.\n")
+
+print("arquivo = open('projeto_python3.txt', 'a')\narquivo.write('Sou um anexo, obrigado por me acrescentar ao texto!')\narquivo.close()\narquivo = open('projeto_python3.txt', 'r')\nprint(arquivo.read())\n")
+
+arquivo = open("projeto_python3.txt", "a")
+
+arquivo.write("\nSou um anexo, obrigado por me acrescentar ao texto!")
+arquivo.close()
+
+arquivo = open("projeto_python3.txt", "r")
+
+print(arquivo.read())
+
+print("\nO conteúdo 'append' foi acrescentando ao final do arquivo de forma automática. Caso for necessário, ainda é possível deletar o arquivo por completo chamando a importação 'os':\n")
+
+print("import os\nos.remove('projeto_python3.txt')\nprint(arquivo.read())")
+
+import os
+os.remove("projeto_python3.txt")
+
+print(arquivo.read())
+
+print("Ou mesmo é possível excluir pelo caminho do sistema operacional em que se encontra o arquivo, e até mesmo verificar se ele ainda existe.\n")
+
+print("import os\nif os.path.exists('projeto_python3.txt'):\n | os.remove('projeto_python3.txt')\nelse:\n | print('Este arquivo já não existe mais!')\n\nos.rmdir('Pasta_teste')\n")
+
+if os.path.exists("projeto_python3.txt"):
+  os.remove("projeto_python3.txt")
+else:
+  print("Este arquivo já não existe mais!")
+
+print("\nPortanto, excluímos o arquivo com '.remove()', nos certificamos que ele não está mais no sistema operacional com '.path.exists()' e ainda por cima excluímos a pasta que ele se localizava através do seu nome com 'rmdir()'")
+
+print("\nPor fim, este foi o conteúdo final do projeto Python 3. Agradeço a todos que chegaram até aqui e conferiram o material na integra, até um próximo momento.")
