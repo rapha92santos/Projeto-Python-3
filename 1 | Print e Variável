@@ -1,0 +1,45 @@
+# || Raphael Santos || Projeto Python 3 ||  
+print("\n|| Raphael Santos || Projeto Python 3 ||\n")
+
+print("Bem-vindo ao Projeto Python 3. O conteúdo que será exibido aqui têm como proposta mostrar um pouco dos meus fundamentos adquiridos ao longo do tempo com a linguaguem de programação Python 3, como forma de demonstração e domínio de diferentes especificidades sobre o tema.\n\nA metodologia utilizada, se baseia em cursos online como Code Academy, Solo Learn, W3schools, Programiz e Stack Overflow. Em paralelo, foi utilizado este site Repl.it para compilar os códigos que também foram criados no Microsoft Visual Studio 2019 e tendo início como se segue.")
+
+# || Print ||
+print("\n|| Print ||\n")
+print("A função principal do print ou 'imprimir' em português, tem como propósito compilar ou imprimir uma mensagem para o usuário final diretamente no seu console. Para demonstração da função print, segue um exemplo da construção do código:\n")
+
+print("Print('Olá, Mundo!')") 
+
+print("\n'Print()' agora na versão Python 3 exige os parênteses, sendo está uma de tantas outras mudanças do Python 2 para o 3.")
+
+# || Variável ||
+print("\n|| Variável ||\n")
+
+intro = "Olá, Mundo!"
+
+print("Variável estabelece uma forma de carregar um valor, neste próximo caso estabeleceu a string 'intro' o valor da mensagem:\n")
+
+print("intro =", intro)
+
+print("\nExistem, todavia, diversas outras formas de se utilizar as variáveis, como segue o exemplo utilizando vírgula:\n")
+
+print("b,m,t = 'Banana', 'Maça', 'Tomate'")
+
+b,m,t = "Banana", "Maça", "Tomate"
+
+print("b =", b,",","m =", m,",","t =", t, "\n")
+
+intro_adição = " E sejam bem-vindos ao projeto Python 3."
+
+print("Variável pode ser 'somada' com o símbolo matemático (+):\n")
+
+print("intro = 'Olá, Mundo!'\nintro_adição = 'E sejam bem-vindos ao projeto Python 3.'\n")
+
+print("intro + intro_adição =", intro + intro_adição)
+
+x = intro
+y = intro_adição
+z = x + y
+
+print("\nOu podemos ainda, somar os valores em uma terceira variável:\n\nx = intro\ny = intro_adição\nz = x + y\n\nz =", z)
+
+print("\nNo próximo bloco, vamos abordar um tema mais teórico relacionado a tipos de dados e operadores.")
