@@ -1,0 +1,99 @@
+# || Input ||
+print("\n|| Input ||\n")
+
+print("'input' é um nova expressão renomeada durante as mudanças do Python 3, diferenciando ele da sua versão antecessora 'raw_imput' do Python 2. Como o próprio nome indica a função executa entrada de informações, agora porém não somente do programador, mas também do usuário que está utilizando o sistema.\n")
+
+print("No próximo exemplo como demonstranção, vamos simular um site que pede informações dos clientes como o nome, telefone e email, mas acrescentando algumas técnicas de programação comuns a esse processo em sites convencionais.\n")
+
+print(" < Seja bem-vindo ao nosso site, por favor efeturar o seu cadastro > \n")
+
+print("while True:\n | usuario = input('Digite seu usuário:')\n | if len(usuario) > 0 and usuario.isalpha():\n || cadastro = usuario.lower()\n || print('...')\n || break\n | elif len(usuario) <= 0:\n || print('xxx')\n | else:\n || print('yyy')\n")
+
+while True:
+    usuario = input("Digite seu usuário:")
+    if len(usuario) > 0 and usuario.isalpha():
+     cadastro = usuario.lower()
+     print("Obrigado!", cadastro, "usuário cadastrado!\n")
+     break
+    elif len(usuario) <= 0:
+        print("Campo de usuário está vazio, por favor, tente novamente!")        
+    else:
+     print("Nome de usuário inválido! Por favor, não utilizar caracteres especiais ou números!")
+     
+print("while True:\n | telefone = input('Digite seu telefone sem traço, com DDI e DDD:')\n | if len(telefone) >= 13 and telefone.startswith('55') and telefone.isdigit():\n || cadastro1 = telefone\n || print('...')\n || break\n | elif len(telefone) == 12 and telefone.startswith('55') and telefone.isdigit():\n || cadastro2 = telefone\n || print('xxx')\n || break\n | elif len(telefone) <= 0:\n || print('yyy')\n | else:\n || print('zzz')\n")
+
+while True:
+    telefone = input("Digite seu telefone sem traço, com DDI e DDD:")    
+    if len(telefone) >= 13 and telefone.startswith("55") and telefone.isdigit():
+        cadastro1 = telefone
+        print("Obrigado! número de celular:", cadastro1, "cadastrado!")
+        break
+    elif len(telefone) == 12 and telefone.startswith("55") and telefone.isdigit():
+        cadastro2 = telefone
+        print("Obrigado! número residencial:", cadastro2,"cadastrado!")
+        break
+    elif len(telefone) <= 0:
+        print("Campo de telefone está vazio, por favor, tente novamente!")
+    else:
+        print("Este número de telefone não existe! Por favor, tente novamente!")
+
+print("\nOs códigos utilizados no 'input' estão estruturados em loop via 'while', usando múltiplas técnica de 'len', 'if', 'elif', 'else', 'break', 'isalpha()', '.lower()', '.isdigit()', '.startswith()' padronizando assim os dados que seriam cadastros.")
+
+print("\nA seguir, vamos ver o último exemplo usando a importação de biblioteca em Python.")
+
+# || Import ||
+print("\n|| Import ||\n")
+
+print("Agora vamos falar de um recurso muito importante em Python que é o 'import', podemos defini-lo como módulo ou extensão existente na bilioteca Python, mas que precisa ser chamada pelo programa que funcionaria como uma espécie de extensão da linguaguem. Entre eles, um dos mais famosos 'import' devem ser 'math', 're', 'numpy', 'os', 'datatime'.\n")
+
+print("import re\n | while True:\n || email = input('Digite seu email:')\n || match = re.findall('[\w.]+@[\w.]+.com', email)\n || if match:\n ||| cadastro3 = email.lower()\n ||| print('...')\n ||| break\n || else:\n ||| print('xxx')\n")
+
+import re
+while True:
+    email = input("Digite seu email:")
+    match = re.findall("[\w.]+@[\w.]+.com", email)
+    if match:
+     cadastro3 = email.lower()
+     print("Obrigado! email:", cadastro3, "cadastrado!")
+     break            
+    else:
+     print("Formato de e-mail inválido! Certifique-se de estar digitando corretamente!")
+
+print("\nEste é um código mais complexo, precisando de uma importação de biblioteca Python que é a operação de expressão regular ou 're', nela criamos o filtro com a combinação esperada do usuário com '[\w.]' correspondendo a texto livre de caracteres entre '@' e '.com' no formato 'set', sendo a fórmula esperada de 'texto + @ + texto + .com' no 'input'.\n")
+
+print("E por fim complementando o assunto 'import', vamos ver alguns outros exemplos além de 're' e suas funções como:\n")
+
+print("import math\n | print('Raiz quadrada de 25 =', int(math.sqrt(25)))\n | print('Pi =', float(math.pi))\n")
+
+import math
+print("Raiz quadrada de 25 =",int(math.sqrt(25)))
+print("Pi =",float(math.pi))
+
+print("\n'math' é um módulo em Python com mais recursos matématicos, como no exemplo, é possível calcular raiz quadrada e determinar o valor de Pi. Sendo que estas, entre outras operações, ficaram de fora da versão padrão da linguaguem.\n")
+
+print("import datetime\n | calendário = datetime.datetime.now()\n | print('Relógio do sistema =', calendário)\n | print('Formato brasileiro =', calendário.day, calendário.month, calendário.year, calendário.strftime('%A'), calendário.strftime('%H'), calendário.strftime('%M'), calendário.strftime('%p'))\n")
+
+import datetime
+calendário = datetime.datetime.now()
+print("Relógio do sistema =", calendário)
+print("Formato brasileiro =", calendário.day, calendário.month, calendário.year, calendário.strftime("%A"), calendário.strftime("%H"), calendário.strftime("%M"), calendário.strftime("%p"))
+
+print("\n'datetime' é outro módulo muito útil de tempo, que reproduz uma arquitetura de linguaguem e consegue retornar valores e expressões com o horário do sistema.")
+
+print("\nimport os\n | print('Versão do sistema =', os.name)\n | pid = os.getpid()\n | print('Identificador de processo =', pid)\n")
+
+import os
+print("Versão do sistema =", os.name)
+pid = os.getpid()
+print("Identificador de processo =", pid)
+
+print("\n'os' é um módulo específico para sistema operacional, ele funciona em conjunto com a linguaguem Python diretamente com o sistema operacional podendo abrir, editar, excluir arquivos e caminhos no computador. Assim como verificar a versão do sistema ou retornar o identificador de processo que o programa está aberto, como vimos acima.\n")
+
+print("import platform\n | print(platform.system(), print(plataform.release())\n")
+
+import platform
+print(platform.system(), platform.release())
+
+print("\nUm complemento ao 'os' é o 'plataform' que retorna com ainda mais detalhes a plataforma que o usuário está utilizando.")
+
+print("\nCom isso finalizamos mais um tópico importante em Python, para o próximo e final bloco vamos aprofundar o conceito de administrador de arquivos entre a linguaguem Python e o sistema operacional.")
