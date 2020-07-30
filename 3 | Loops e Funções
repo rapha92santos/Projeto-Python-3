@@ -1,0 +1,172 @@
+# || Loops e Funções || 
+print("|| Loops e Funções ||\n")
+
+print("Com loops e funções, vamos explorar novos aspectos da linguaguem Python em relação a construção de estruturas lógicas, com resultados e variáveis interdependetes.\n")
+
+# || if ||
+print("|| if ||\n")
+print("A seguir, um exemplo da função 'if':\n")
+
+print("if 5 < 10:\n | print('...')\nif 5 > 10:\n | print('xxx')\n")
+
+if 5 < 10: #Impresso
+    print("<if> Se 5 for menor que 10, você vai ler essa mensagem.") 
+    print("<if> Se 5 for maior que 10, a mensagem foi ocultada pelo código.")
+if 5 > 10: #Oculto
+    print("Você não vai ler essa mensagem.")
+
+# || Elif ||
+print("\n|| Elif ||\n")
+
+print("A função 'elif' segue o mesmo princípio, porém atribuí um novo valor caso retorne um segundo cenário:\n")
+
+print("if 5 >= 10:\n | print('...')\nelif 5 <= 10:\n | print('xxx')\n")
+
+if 5 >= 10: #Oculto
+    print("Você não vai ler essa mensagem.")
+elif 5 <= 10: #Impresso
+    print("<if> Se 5 for maior ou igual a 10, a mensagem foi ocultada pelo código.")
+    print("<elif> Caso contrário, se 5 for menor ou igual a 10, está mensagem será escrita.")
+
+# || Else || 
+print("\n|| Else ||\n")
+
+print("A função 'else' segue o mesmo princípio das anteriores, mas atribuí uma terceira via caso não retorne nenhum cenário:\n")
+
+print("if 5 > 10:\n | print('...')\nelif 5 >= 10:\n | print('xxx')\nelse:\n | print('abc')\n")
+
+if 5 > 10: #Oculto
+    print("Você não vai ler essa mensagem.")
+elif 5 >= 10: #Oculto
+    print("Você não vai ler essa mensagem.")
+else: #Impresso
+    print("<if> Se 5 for maior que 10, a mensagem foi ocultada pelo código.")
+    print("<elif> Se 5 for maior ou igual a 10, a mensagem foi ocultada pelo código.")
+    print("<else> Caso não achar correspondência nas anteriores, está mensagem foi impressa.")
+
+print("\nVale lembrar que existem algumas regras de hierarquia, onde 'if' é o termo principal, caso for verdade, seguido de 'elif' e por último 'else':\n")
+
+print("if 5 != 10:\n | print('...')\nelif 5 < 10:\n | print('xxx')\nelse:\n | print('abc')\n")
+
+if 5 != 10: #Impresso
+    print("<if> Se 5 for diferente de 10, está mensagem vai ter prioridade sob as demais.")
+    print("<elif> Caso contrário, se 5 for menor que 10 vou esperar 'if' retornar falso, oculto.")
+    print("<else> Se não tiver correspondência de 'if' e 'elif' fico como backup, oculto.")
+elif 5 < 10: #Oculto
+    print("Estou certo, mas por aqui apenas por precaução")
+else: #Oculto
+    print("Se for preciso estou por aqui.")
+
+# || Pass ||
+print("\n|| Pass ||\n")
+
+print("A função 'pass' autoriza o código ficar vazio em modo de espera, evitando assim um erro na hora da compilação:\n")
+
+if 5 != 10: #Incompleto
+    pass
+print("if 5 != 10:\n | pass")
+
+# || While ||
+print("\n|| While ||\n")
+
+print("O 'while' é uma função que autoriza um loop de dados, portanto ele serve para dar sequência a um código. Neste próximo exemplo vamos contar de 0 até 10:\n")
+
+print("contar = 1\nwhile contar < 11:\n | print(contar)\n | contar += 1\n")
+
+contar = 1
+while contar < 11:
+    print(contar)
+    contar += 1
+
+print("\nUma função importante é 'break' em que quebra a sequência do código, pois, sem está função a tendência é contar ao infinito sendo passível de um erro grave de memória. Vamos quebrar e contar apenas até 5:\n")
+
+print("contar = 1\nwhile contar < 11:\n | print(contar)\n | if (contar == 5):\n || break\n | contar += 1\n")
+
+contar = 1
+while contar < 11:
+    print(contar)
+    if (contar == 5):
+        break
+    contar += 1
+
+print("\nCaso for necessário, é possível ainda ocultar um número da sequência e dar continuidade daonde parou, vamos agora pular o 5:\n")
+
+print("contar = 0\nwhile contar < 10:\n | contar += 1\n | if contar == 5:\n || continue\n | print(contar)\n")
+
+contar = 0
+while contar < 10:
+    contar += 1
+    if contar == 5:
+        continue
+    print(contar)
+   
+print("\nA função 'else' também pode entra no loop, visto quando acaba uma sequência é possível concluir com algum novo valor:\n")
+
+print("contar = 0\nwhile contar < 10:\n | contar += 1\n | print(contar)\nelse:\n | print('...')\n")
+
+contar = 0
+while contar < 10:
+    contar += 1
+    print(contar)
+else:
+    print("Já estou mais calmo!")
+
+# || For || 
+print("\n|| For ||\n")
+
+print("'for' é uma função que também serve para loops e sequências, só que agora de uma forma mais específica para strings, listas, tuple, dicionário, set:\n")
+
+string = "String"
+lista = ["exemplo", "lista"]
+dicionario = {"dicionário" : "exemplo", "dict" : "data type", "index" : "localização"}
+tuple = ("questão 1:", "questão 2:", "questão 3:")
+set = {"a) b) c) d) e)"}
+
+print("Exemplo de 'for' com 'string' =",string,":\n")
+
+print("for a in string:\n | print(a)\n")
+
+for a in string:
+ print(a)
+
+print("\nExemplo de 'for' com 'lista' =",lista,":\n")
+
+print("for b in lista:\n | print(b)\n")
+
+for b in lista:
+ print(b)
+
+print("\nExemplo de 'for' com 'dicionário' =",dicionario,"usando 'if' e 'break':\n")
+
+print("for c in dicionário:\n | print(c)\n | if c == 'dict':\n || break\n")
+
+for c in dicionario:
+ print(c)
+ if c == "dict":
+     break
+
+print("\nExemplo de 'for' com 'dicionário', usando 'if' e 'continue':\n")
+
+print("for c in dicionário:\n | if c == 'dict':\n || continue\n | print(c)\n")
+
+for c in dicionario:
+ if c == "dict":
+     continue
+ print(c)
+
+print("\nExemplo de 'for' com 'range' contando de 1 até 10 pulando duas casas:\n")
+
+print("for d in range(1,11,2):\n | print(d)\n")
+
+for d in range(1,11,2):
+     print(d)
+
+print("\nExemplo de 'for' fazendo um 'inner loop' com 'tuple' =",tuple,"e 'set' =",set,":\n")
+
+print("for e in tuple:\n | for f in set:\n || print(e,f)\n")
+
+for e in tuple:
+    for f in set:
+        print(e,f)
+
+print("\nIsso concluí o tema com loops e funções. Próximo, vamos abordar outro assunto voltado a 'def' e lambda.")
