@@ -1,0 +1,90 @@
+# || Array e Metódos de Lista||
+print("\n|| Array e Metódos de Lista ||\n")
+
+print("Neste tópico, iremos explorar mais sobre 'array' e metódos de lista que são formas úteis de se trabalhar com grande quantidade e combinação de dados como: Length, Index, List, Append, Insert, Remove, Pop, Reverse, Sort, Extend, Clear.")
+
+print("\nVamos dar início criando uma lista com gêneros musicais e utilizando metódos e 'array' para pesquisar, criar, excluir, juntar, entre outras funções. É válido lembrar, que o índice em Python começa a contar apartir do número 0, portanto, nesta lista teríamos 0-5 índices:\n")
+
+Musica = ["Clássica", "Rock", "Jazz", "Eletrônica", "Pop", "Hip Hop"]
+
+print("Musica =", Musica)
+
+print("\nVamos trabalhar com esta lista para verificar a sua extensão, alcance, índice de localização positivos e negativos com as funções 'len()', '.index()', [x:y], [-x:-y]:")
+
+print("\nprint(len(Musica)) =", len(Musica))
+
+print("\nprint(Musica.index('Clássica')) =", (Musica.index("Clássica")))
+
+print("\nprint(Musica[4]) =", Musica[4])
+
+print("\nprint(Musica[-4]) =", Musica[-4])
+
+print("\nprint(Musica[:3]) =", Musica[:3])
+
+print("\nprint(Musica[3:]) =", Musica[3:])
+
+print("\nprint(Musica[2:4])' =", Musica[2:4])
+
+print("\nprint(Musica[-4:-1]) =", Musica[-4:-1])
+
+Artista = list(("Beethoven", "Kiss", "Mile Davis", "Skrillex", "Lady Gaga", "50cent"))
+
+print("\nA seguir, podemos criar uma lista do zero, com artistas utilizando o construtor 'list()':\n\nArtista = list(('...')) =", Artista)
+
+Musica.append("MPB")
+
+print("\nNo próximo passo, podemos acrescentar a lista Música um novo gênero como 'MPB' usando '.append()' que entrará automaticamente no último index:\n\nMusica.append('MPB') =", Musica)
+
+Artista.insert(6, "Tim Maia")
+
+print("\nOu então, é possível ainda indicar uma localização de inserção com '.insert()':\n\nArtista.insert(6, 'Tim Maia') =", Artista)
+
+Musica.remove("Pop")
+
+print("\nA lista está ficando muito grande, então vamos retirar o valor específico 'Pop' dela usando '.remove()':\n\nMusica.remove('Pop') =", Musica)
+
+Artista.pop(4)
+
+print("\nAgora, se não soubessemos identificar o valor dentro da lista poderiamos utilizar '.pop()', para excluir um item através do seu index:\n\nArtista.pop(4) =", Artista)
+
+Artista[1] = "Metallica"
+
+print("\nPodemos também alterar um dado que já existe na lista com 'string[x]':\n\nArtista[1] = 'Metallica' =", Artista)
+
+Musica.reverse()
+
+print("\nComo ficaria a lista se ela fosse invertida? Com '.reverse()' é possível visualizar essa mudança de ordem:\n\nMusica.reverse() =", Musica)
+
+backup_musica = Musica.copy()
+
+print("\nVamos criar um backup das listas alteradas, utilizando '.copy()':\n\nbackup_musica = Musica.copy() =", backup_musica)
+
+Musica.sort()
+
+print("\nCom '.sort()' ele organizar a lista por ordem alfabética automaticamente, porém ele pode ser usado também em outros requisitos como inverter e definir valores de chaves para organizar a lista:\n\nMusica.sort() =", Musica)
+
+Musica.sort(reverse=True)
+
+print("\nMusica.sort(reverse=True) =", Musica)
+
+def tamanho(x):
+    return len(x)
+
+Musica.sort(key=tamanho)
+
+print("\ndef tamanho(x):\n | return len(x)\n\nMusica.sort(key=tamanho) =", Musica)
+
+Musica.extend(Artista)
+
+print("\nVamos juntar as duas listas com '.extend()' para ver como fica:\n\nMusica.extend(Artista) =", Musica)
+
+Musica.extend(backup_musica)
+conta = Musica.count("Rock")
+
+print("\nÉ possível com '.count()' contar quantas vezes um mesmo dado está presente na lista, nesta situação imagine se a lista backup se juntar com a lista Músicas, quantas vezes o valor 'Rock' apareceria?\n\nMusica.extend(backup_musica) =", Musica, "\n\nconta = Musica.count('Rock') =", conta)
+
+Musica.clear()
+
+print("\nE por fim, a lista Música acabou ficando muito confusa, utilizando '.clear()' é possível formatar ela do zero:\n\nMusica.clear() =", Musica)
+
+print("Dessa forma encerramos mais um assunto no projeto Python, próxmo, vamos abordar um novo assunto relacionado a organização de estruturas com classes, objeto, '__init()'")
