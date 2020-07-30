@@ -1,0 +1,132 @@
+# || Classe, Objeto e __Init__() ||
+print("\n|| Classe, Objeto e __Init__() ||\n")
+
+print("Vamos ver neste tópico que classes se assemelha em estrutura ao 'Def', só que agora com um nível superior de organização com objetos, vínculos e heranças de informações.")
+
+print("\nTambém vamos abordar uma importante estrutura em Python a '__Init__()' ou inicialização que ajuda assimilar valores para os objetos que serão chamados pelas estruturas.")
+
+# || Classes ||
+print("\n|| Classes ||\n")
+print("Classe é um forma de se trabalhar em conjunto com novas funcionalidades:")
+
+class menu:
+   Caesar_Salad = "salada e frango", 5
+   Parmegiana = "fíle de bife", 15
+   Sorvete = "creme", 10
+
+print("\nclass menu:\n | Caesar_Salad = 'salada e frango', 5\n | Parmegiana = 'fíle de bife', 15\n | Sorvete = 'creme', 10\n")
+
+print("No exemplo, classe está sendo usado de forma semelhante ao 'def' e ainda muito simples, apenas para juntar propriedades de valores de um 'menu'.\n")
+
+print("Se fossemos imprimir o que significa tudo isso, daria um resultado ainda primário:", menu)
+
+# || Objeto ||
+print("\n|| Objeto ||\n")
+
+print("Já objeto é uma forma de atribuir valor a algo individualmente, parecida com variável só que vínculada a uma classe:\n")
+
+class Menu:
+   Caesar_Salad = "salada e frango", 5
+   Parmegiana = "fíle de bife", 15
+   Sorvete = "creme", 10
+       
+Entrada = Menu()
+Refeicao = Menu()
+Sobremesa = Menu()
+
+print("class Menu:\n | Caesar_Salad = 'salada e frango', 5\n | Parmegiana = 'fíle de bife', 15\n | Sorvete = 'creme', 10\n\nEntrada = Menu()\nRefeição = Menu()\nSobremesa = Menu()\n")
+
+print("Na hora de imprimir os valores dos objetos 'entrada', 'refeição' e 'sobremesa' sua saída seria:\n")
+
+print("Entrada.Caesar_Salad =", Entrada.Caesar_Salad)
+print("Refeição.Parmegiana =", Refeicao.Parmegiana)
+print("Sobremesa.Sorvete =", Sobremesa.Sorvete)
+
+print("\nPortanto, vimos que os objetos utilizados foram definidos por herança ou termo em inglês para 'inheritance'. Mas, esta ainda é uma forma muito primitiva de se usar a função classe, como vamos ver com a inicalização.")
+
+# || __Init()__ ||
+print("\n|| __Init()__ ||\n")
+
+print("O '__Init__()' vem com uma proposta de inicializar uma construção de valores para os objetos e estrutura com um maior nível de sofisticação, como:\n")
+
+class Cardapio:
+    def __init__(self, prato, desc, preco):
+        self.prato = prato
+        self.desc = desc
+        self.preco = preco
+
+entrada = Cardapio("Caesar Salad", "salada e frango", 5)
+refeicao = Cardapio("Parmegiana", "fíle de bife", 15)
+sobremesa = Cardapio("Sorvete", "creme", 10)
+
+print("class Cardapio:\n | def __init__(self, prato, descrição, preço):\n || self.prato = prato\n || self.descrição = descrição\n || self.preço = preço\n\nentrada = Cardapio('Caesar Salad', 'salada e frango', 5)\nrefeicao = Cardapio('Parmegiana', 'fíle de bife', 15)\nsobremesa = Cardapio('Sorvete', 'creme', 10)\n")
+
+print("Aqui a dinâmica mudou um pouco, as propriedades não fazem mais parte da classe que deu seu lugar a estrutura '__init__()' com papel de inicializar as propriedades de valores como 'prato', 'descrição' e 'preço' dentro do cardápio.")
+
+print("\nOutra estrutura importante pra se destacar é a 'self.' que atribuí vínculo as propriedades dos objetos, que na hora de imprimir seu valor ficaria desse modo:\n")
+
+print("entrada.prato =", entrada.prato)
+print("refeição.descrição =",refeicao.desc)
+print("sobremesa.preço =", sobremesa.preco)
+
+print("\nMas ainda não é tudo, existe ainda o metódo de classes que são vínculos dentro das definições.")
+
+print("\nclass cardapio(object):\n | def __init__(próprio, prato, descrição, preço):\n || próprio.prato = prato\n || próprio.descrição = descrição\n || próprio.preço = preço\n\n | def apresentação(próprio):\n || print('...')\n\nentree = cardapio('Caesar Salad', 'salada e frango', 5)\nmain = cardapio('Parmegiana', 'fíle de bife', 15)\ndessert = cardapio('Sorvete', 'creme', 10)\n\nentree.apresentação()\n")
+
+print("Executando essa estrutura de metódo de classes o resultado ficaria:\n")
+
+class cardapio(object):
+    def __init__(proprio, prato, desc, preco):
+        proprio.prato = prato
+        proprio.desc = desc
+        proprio.preco = preco
+
+    def apresentacao(proprio):
+        print ("Olá, seja bem-vindo ao restaurante prato feito! Hoje, no cardápio temos:\n > Entrada com", entree.prato, "feito com", entree.desc, "por R$", entree.preco, "\n > Prato principal de", main.prato, "feito com", main.desc, "por R$", main.preco, "\n > Sobremesa de", dessert.prato, "sabor", dessert.desc, "por R$", dessert.preco)
+
+entree = cardapio("Caesar Salad", "salada e frango", 5)
+main = cardapio("Parmegiana", "fíle de bife", 15)
+dessert = cardapio("Sorvete", "creme", 10)
+
+entree.apresentacao()
+
+print("\nNa estrutura pode-se notar duas coisas, que o termo 'self.' não é único, ele pode ser definido da forma que quisermos. Já o vínculo, é uma 'def' retomando uma a outra e se vê necessário o uso do 'scope' ou luneta que é um código de saída como 'entree.apresentação()' para imprimir a mensagem estabelecendo sua conexão com os dados.")
+
+print("\nE por fim, podemos explorar mais as ferramentas de manuntenção da estrutura classe, como editar e deletar:\n")
+
+print("class ementa:\n | def __init__(self, prato, descrição, preço):\n || self.prato = prato\n || self.descrição = descrição\n || self.preço = preço\n\n | def display(self):\n || if dish1.prato == 'Ceaser Salad' and dish3.prato == 'Sorvete':\n ||| print('Menu Desatualizado!')\n || elif dish1.prato == 'Sopa':\n ||| print('Menu Atualizado!')\n || else:\n ||| print('Menu indisponível')\n\ndish1 = ementa('Caesar Salad', 'salada e frango', 5)\ndish2 = ementa('Parmegiana', 'fíle de bife', 15)\ndish3 = ementa('Sorvete', 'creme', 10)\n\ndish1.prato = 'Sopa'\ndish1.desc = 'caldo verde'\ndish1.preco = 4\n\ndel dish3.prato\n\ndish1.display()")
+
+class ementa:     
+    def __init__(self, prato, desc, preco):
+        self.prato = prato
+        self.desc = desc
+        self.preco = preco
+
+    def display(self):
+        if dish1.prato == "Ceaser Salad" and dish3.prato == "Sorvete":
+            print("Menu desatualizado!")
+        elif dish1.prato == "Sopa":
+            print("Menu atualizado!")
+        else:
+            print("Menu indisponível")
+
+dish1 = ementa("Caesar Salad", "salada e frango", 5)
+dish2 = ementa("Parmegiana", "fíle de bife", 15)
+dish3 = ementa("Sorvete", "creme", 10)
+
+dish1.prato = "Sopa"
+dish1.desc = "caldo verde"
+dish1.preco = 4
+
+print("\nExecutando esse código o resulado seria:\n")
+
+dish1.display()
+print("Entrada modificada para prato, '", dish1.prato, "', com descrição '", dish1.desc, "' e preço novo R$", dish1.preco)
+print("Prato principal continua, '",dish2.prato, "', com descrição '", dish2.desc,"' e preço R$", dish2.preco)
+del dish3.prato
+print("Sobremesa ficou sem prato, com descrição '",dish3.desc, "' e preço R$",dish3.preco)
+
+print("\nVisto o exemplo acima, a opção 'del' excluiu a sobremesa 'Sorvete' do cardápio. Como não é possível imprimir algo que não existe, se o código 'dish3.prato' estivesse escrito o sistema retornaria um erro.")
+
+print("\nTerminamos mais um tema, para o próximo bloco vamos falar mais sobre um assunto mais complexo de 'input' e importação de dados.")
+
