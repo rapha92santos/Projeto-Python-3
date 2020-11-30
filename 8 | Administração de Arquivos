@@ -61,4 +61,4 @@ else:
 
 print("\nPortanto, excluímos o arquivo com '.remove()', nos certificamos que ele não está mais no sistema operacional com '.path.exists()' e ainda por cima excluímos a pasta que ele se localizava através do seu nome com 'rmdir()'")
 
-print("\nPor fim, este foi o conteúdo final do projeto Python 3. Agradeço a todos que chegaram até aqui e conferiram o material na integra, até um próximo momento.")
+print("\nPor fim, este foi mais um conteúdo concluído em python, para o próximo tema vamos abordar outra relevante ferramenta o Numpy.")
